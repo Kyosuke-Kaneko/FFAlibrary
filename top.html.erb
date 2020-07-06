@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="Zentai">
+ <div class="Mannaka"
+    <head>
+        <h1 class="my-4">
+        FFA Library</h1>
+            　<div class="float-right">
+            　　<a class="btn btn-secondary" href="https://ffalibrary.herokuapp.com/archive/overview">アーカイブ</a>
+                <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "btn btn-secondary" %>
+                <%= link_to"新規投稿",movies_new_path, class: "btn btn-secondary" %>
+                <a class="btn btn-secondary" href="/movies/index?class=btn+btn-secondary">動画一覧</a>
+            </div>
+            
+
+            <section id="first-block">
+            
+        </section>
+    </head>
+
+
+    <body>
+        <div class="searchform">  
+            <h3>月や年度</h3> 
+            <div class="toggle-wrap">
+            <input type="checkbox" id="toggle-checkbox">
+            <label class="toggle-button" for="toggle-checkbox">下から選んでね</label>
+            <div class="toggle-content">
+            <li>
+            <%= link_to "2020 卒ライ", archive_sotsurai2020_path %>
+            </li>
+            <li>
+            <%= link_to "2020 春合宿", archive_haruga2020_path %>
+            </li>
+            <li>
+            <%= link_to "2020 Fjam", archive_fjam2020_path %>
+            </li>
+            <li>
+            <%= link_to "2019 クリスマス祭", archive_christmas2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 学祭", archive_gakusai2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 10月祭", archive_zyugatu2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 夏合宿", archive_natsuga2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 8月祭", archive_hatigatu2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 FAD", archive_fad2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 7月祭", archive_nanagatu2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 6月祭", archive_rokugatu2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 新発ライブ", archive_shinpatu2019_path %>
+            </li>
+            <li>
+            <%= link_to "2019 新歓ライブ", archive_shinkan2019_path %>
+            </li>
+            </div>
+          </div><!-- /.toggle-wrap -->
+           
+            <h3>アーティスト名または曲名</h3>
+            <%= form_tag({controller:"movies",action:"index"}, method: :get) do %>
+                <%= text_field_tag :search, "", class: "form-control", placeholder: "Search for..." %>
+                <%= submit_tag "Go!", class: "btn btn-secondary" %>
+            <% end %>
+        </div>
+            
+ </div>>       
+            <div class="cp_cssslider">
+            <input type="radio" name="cp_switch" id="photo1" checked/>
+            <label for="photo1"><img src= "/assets/Natsuga2019.jpg" width="50" height="50" /></label>
+            <img src= "/assets/Natsuga2019.jpg" width="520" height="400"  />
+            <input type="radio" name="cp_switch" id="photo2"/>
+            <label for="photo2"><img src= "/assets/Gakusai2019.jpg" width="50" height="50" /></label>
+            <img src= "/assets/Gakusai2019.jpg" width="520" height="400" />
+            <input type="radio" name="cp_switch" id="photo3"/>
+            <label for="photo3"><img src= "/assets/Kuripa2019.jpg" width="50" height="50" /></label>
+            <img src= "/assets/Kuripa2019.jpg" width="520" height="400"/>
+            <input type="radio" name="cp_switch" id="photo4"/>
+            <label for="photo4"><img src= "/assets/Haruga.jpg" width="50" height="50" /></label>
+            <img src= "/assets/Haruga.jpg" width="520" height="400" />
+            <input type="radio" name="cp_switch" id="photo5"/>
+            <label for="photo5"><img src= "/assets/Sotsurai2020.jpg" width="50" height="50" /></label>
+            <img src= "/assets/Sotsurai2020.jpg" width="520" height="400" />
+            </div>   
+    </body>
+
+</div>
