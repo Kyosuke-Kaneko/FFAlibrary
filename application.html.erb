@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <div class= "title">
+        <title>FFAlibrary3</title>
+      </div>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://ffalibrary.herokuapp.com/">FFAlibrary</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a href="https://ffalibrary.herokuapp.com/" class="nav-link" >Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://ffalibrary.herokuapp.com/archive/overview">Archive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://ffalibrary.herokuapp.com/movies/new">Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://ffalibrary.herokuapp.com/movies/index?class=btn+btn-secondary">Index</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <main>
+  <%= yield %>
+</main>
+
+  <footer>
+  <p>Copyright © Field Folk Asociation All Rights Reserved.</p>
+ </footer>
+
+  </body>
+</html>
